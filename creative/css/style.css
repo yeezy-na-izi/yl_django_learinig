@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+.card-animation:hover {
+    width: 100px;
+    height: 100px;
+    background: grey;
+    transition: all ease-in 600ms;
+}
+.card-animation {
+    width: 100px;
+    height: 100px;
+}
+
+
+.teacher-container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+  padding: 10px;
+  align-items: center;
+}
+
+.teacher-container .teacher-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: #fff;
+  text-shadow: 0 15px 60px rgba(0, 0, 0, .5);
+}
+
+.teacher-container .teacher-card .teacher-face {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teacher-container .teacher-card .teacher-face.teacher-face1{
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.teacher-container .teacher-card .teacher-face.teacher-face1 h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.teacher-container .teacher-card .teacher-face.teacher-face2 {
+  background: #111;
+  transition: .5s;
+}
+
+.teacher-container .teacher-card .teacher-face.teacher-face2 {
+  background-image:url(http://i.absurdopedia.net/thumb/c/c0/Татарский_снюсоед_перед_нападением.jpg/300px-Татарский_снюсоед_перед_нападением.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.teacher-container .teacher-card:hover .teacher-face.teacher-face2 {
+  height: 60px;
+}
+
+.teacher-container .teacher-card .teacher-face.teacher-face ::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+}
+
+.teacher-container .teacher-card .teacher-face.teacher-face2 h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 10em;
+  color: #ffffff;
+  transition: .5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.teacher-container .teacher-card:hover .teacher-face.teacher-face2 h2 {
+  font-size: 2em;
+}
+
+.lesson-container
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.lesson-container .lesson-card
+{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+.lesson-container .lesson-card .lesson-circle
+{
+    position: relative;
+    width:100%;
+    height:100%;
+    background: #000;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+.lesson-container .lesson-card .lesson-circle h2
+{
+    color: #fff;
+    font-size:4.5em;
+    padding: 20px;
+}
+.lesson-container .lesson-card .lesson-content
+{
+    position: absolute;
+    bottom: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.lesson-container .lesson-card .lesson-content p
+{
+    color: #666;
+}
+.lesson-container .lesson-card .lesson-content .lesson-button
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.image-container
+{
+    width: 90%;
+
+}
+.image-container img{
+    position: relative;
+    max-width: 100%;
+}
+
+.material-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.material-card {
+  margin: 20px;
+  padding: 20px;
+  width: 420px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background: radial-gradient(#1fe4f5, #3fbafe);
+}
+
+.material-card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 350;
+  color: #ffffff;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+.card-1 {
+  background: radial-gradient(#1fe4f5, #3fbafe);
+}
+
+.card-2 {
+  background: radial-gradient(#FF69B4, #DB7093);
+}
+
+.card-3 {
+  background: radial-gradient(#76b2fe, #b69efe);
+}
+
+.card-4 {
+  background: radial-gradient(#60efbc, #58d5c9);
+}
+
+.card-5 {
+  background: radial-gradient(#f588d8, #c0a3e5);
+}
+
